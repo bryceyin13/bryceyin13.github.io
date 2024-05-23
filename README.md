@@ -1,1 +1,1 @@
-researcg homepage
+research homepage
