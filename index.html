@@ -20,11 +20,73 @@
                 text-align: center;
                 padding: 10px 0;
             }
-            .project-image {
-            margin-right: 50px; 
+            body {
+            font-family: helvetica, ariel, 'sans serif';
+            }
+            .container {
+                width: 980px;
+                margin: 0 auto;
+            }
+            .profile {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 0;
+            }
+            .profile img {
+                width: 250px;
+            }
+            .projects {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 20px;
+            }
+            .project-item {
+                display: flex;
+                gap: 20px;
+            }
+            .project-item img {
+                width: 200px;
+                border-radius: 8px;
+                border: 1px solid #ccc; /* Border applied to the image container */
+                padding: 5px; /* Padding inside the border */
+            }
+            .project-details {
+                display: flex;
+                flex-direction: column;
+            }
+            .project-title {
+                font-size: 18px;
+                font-weight: bold;
+                margin: 0;
+            }
+            .project-authors {
+                font-size: 15px;
+                color: #000;
+                font-family: Arial, sans-serif;
+            }
+            .project-links {
+                display: flex;
+                gap: 10px;
+                margin-top: 10px;
+            }
+            .project-links a {
+                text-decoration: none;
+                padding: 5px 10px;
+                border: 1px solid #6a1b9a;
+                border-radius: 4px;
+                color: #6a1b9a;
+            }
+            .project-links a:hover {
+                background-color: #6a1b9a;
+                color: #fff;
+            }
+            hr {
+            border: none;
+            border-top: 1px solid #666; /* Set the color of the horizontal line */
             }
         </style>
-    <!-- </script> -->
     </head>
 
     <body>
@@ -59,58 +121,48 @@
                 </td>        
             </tr>
         </tbody></table> 
-        <p>
-        </p><hr size="1" align="left" noshade="">
-        <p>
+        <p></p>
+        <hr size="1" align="left" noshade="" style="border-top: 1px solid #666;">
+        <p></p>
         
         <font face="helvetica, ariel, &#39;sans serif&#39;"> 
         </font></p><h2><font face="helvetica, ariel, &#39;sans serif&#39;">A Short Bio</font></h2><font face="helvetica, ariel, &#39;sans serif&#39;">
          I am an undergraduate student at Wuhan University and expected to graduate in June 2025. 
          During my undergraduate study, I am fortunate to be advised by Prof.<a href="http://graphvision.whu.edu.cn/">Chunxia Xiao</a>, Prof.<a href="https://personal.utdallas.edu/~xxg061000/">Xiaohu Guo</a> and 
          Prof.<a href="https://cs.uwaterloo.ca/~thachisu/">Toshiya Hachisuka</a>.
-
+         
         </font></p><h2><font face="helvetica, ariel, &#39;sans serif&#39;">Research</font></h2><font face="helvetica, ariel, &#39;sans serif&#39;">
         My research is in Computer Graphics, mainly focusing on rendering, especially for Light transport simulation.
         I also have some research experience in geometric processing, mainly focusing on medial axis and subdivision surface fitting. 
         Like many distinguished scholars in this field, my dream is to create a totally realistic world in computers. 
 
         </font></p><h2><font face="helvetica, ariel, &#39;sans serif&#39;">Projects</font></h2><font face="helvetica, ariel, &#39;sans serif&#39;">
-        <font face="helvetica, ariel, &#39;sans serif&#39;">
-            <table cellspacing="17">
+        <div class="projects">
+            <div class="project-item">
+                <img src="./image/pm.png" alt="Photon Mapping">
+                <div class="project-details">
+                    <p class="project-title">Reproduce of photon mapping</p>
+                    <p class="project-authors">A reproduce of paper <a href="https://legacy.sites.fas.harvard.edu/~cs278/papers/pmap.pdf">Global Illumination using Photon Maps</a> by H.W.Jensen.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/bryceyin13/photon_mapping">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="./image/renderer.png" alt="Software Renderer">
+                <div class="project-details">
+                    <p class="project-title">Software renderer</p>
+                    <p class="project-authors">A tiny software renderer with basic functions of rendering pipeline: MVP transforms, rasterization, texture mapping, z-buffer, perspective projection, programmable vertex & fragment shaders, etc.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/bryceyin13/Software-Renderer">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <tbody>
-                <tr>
-                    <td width="45%">
-                        <img width="200"  class="project-image" src="./image/pm.png" border="0">
-                            </td>
-                    <td>
-                        <b>Reproduce of photon mapping</b>
-                        <br>
-                        A reproduce of paper <a href="https://legacy.sites.fas.harvard.edu/~cs278/papers/pmap.pdf">Global Illumination using Photon Maps</a> by H.W.Jensen. 
-                        <br>
-                        [<a href="https://github.com/bryceyin13/photon_mapping">Github</a>]
-                    </td>
-                </tr>
-                <tr>
-                    <td width="45%">
-                        <img width="200"  class="project-image" src="./image/renderer.png" border="0">
-                            </td>
-                    <td>
-                        <b>Software renderer</b>
-                        <br>
-                        A tiny software renderer with basic functions of rendering pipeline: MVP transforms, rasterization, texture mapping, z-buffer, perspective projection,
-                         programmable vertex & fragment shaders, etc.
-                        <br>
-                        [<a href="https://github.com/bryceyin13/Software-Renderer">Github</a>]
-                    </td>
-                </tr>
-                
-            </tbody></table>
-        </font>
-
-        <p>
-        </p><hr size="1" align="left" noshade="">
-        <p>
+        <p></p>
+        <hr size="1" align="left" noshade="" style="border-top: 1px solid #666;">
+        <p></p>
 
         </font></p><h2><font face="helvetica, ariel, &#39;sans serif&#39;">Misc</font></h2><font face="helvetica, ariel, &#39;sans serif&#39;">
         <p>I started to watch football when I was a little kid and it later became my favorite sports.
