@@ -10,24 +10,50 @@
         <meta name="google-site-verification" content="rteqJ4-Tg7NTlOAJd6aTvg3Io0bgpUeopVzNL3zQBrk" />
         <link rel="icon" href="./image/icon.png">
         <style>
+            @font-face {
+                font-family: 'FontinSans';
+                src: url('./font/Fontin\ Sans/FontinSans_Cyrillic_B_46b.otf') format('opentype');
+                font-weight: bold;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'FontinSans';
+                src: url('./font/Fontin\ Sans/FontinSans_Cyrillic_BI_46b.otf') format('opentype');
+                font-weight: bold;
+                font-style: italic;
+            }
+            @font-face {
+                font-family: 'FontinSans';
+                src: url('./font/Fontin\ Sans/FontinSans_Cyrillic_I_46b.otf') format('opentype');
+                font-weight: normal;
+                font-style: italic;
+            }
+            @font-face {
+                font-family: 'FontinSans';
+                src: url('./font/Fontin\ Sans/FontinSans_Cyrillic_R_46b.otf') format('opentype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'FontinSansSC';
+                src: url('./font/Fontin\ Sans/FontinSans_Cyrillic_SC_46b.otf') format('opentype');
+                font-weight: normal;
+                font-style: normal;
+		    }
             .footer {
                 position: relative;
                 left: 0;
                 bottom: 0;
                 width: 100%;
-                background-color:  #000080;
+                background-color:  #003974;
                 color: white;
                 text-align: center;
                 padding: 10px 0;
             }
             body {
-            font-family: helvetica, ariel, 'sans serif';
+                font-family: 'FontinSans', sans-serif;
             }
-            .container {
-                width: 980px;
-                margin: 0 auto;
-            }
-            .profile {
+            /* .profile {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -35,7 +61,7 @@
             }
             .profile img {
                 width: 250px;
-            }
+            } */
             .projects {
                 display: flex;
                 flex-direction: column;
@@ -49,7 +75,7 @@
             .project-item img {
                 width: 200px;
                 border-radius: 8px;
-                border: 1px solid #ccc; /* Border applied to the image container */
+                border: 2px solid #ccc; /* Border applied to the image container */
                 padding: 5px; /* Padding inside the border */
             }
             .project-details {
@@ -57,14 +83,16 @@
                 flex-direction: column;
             }
             .project-title {
+                font-family: 'FontinSans', serif;
                 font-size: 18px;
                 font-weight: bold;
                 margin: 0;
             }
-            .project-authors {
-                font-size: 15px;
+            .project-description {
+                font-family: 'FontinSans', serif;
+                font-size: 16px;
                 color: #000;
-                font-family: Arial, sans-serif;
+                font-weight: normal;
             }
             .project-links {
                 display: flex;
@@ -82,67 +110,87 @@
                 background-color: #6a1b9a;
                 color: #fff;
             }
-            hr {
-            border: none;
-            border-top: 1px solid #666; /* Set the color of the horizontal line */
+            /* .hr {
+                border: none;
+                border-top: 1px solid #666; /* Set the color of the horizontal line 
+            } */
+            .centered-table {
+                width: 1100px;
+                margin: 0 auto;
+                border: none;
+            }
+            a {
+                color: #064f9e; 
+                text-decoration: none;
             }
         </style>
     </head>
 
     <body>
-        <table border="0" width="980px" align="center"><tbody><tr><td>
+        <table class="centered-table">
+            <tbody>
+                <tr>
+                    <td>
+        <!-- <table border="0" width="980px" align="center"><tbody><tr><td> -->
     
         </td><td valign="top">
         <br>
-        <table style="font-size: 11pt;" border="0" width="100%">
+        <!-- <table style="font-size: 11pt;" border="0" width="100%"> -->
+        <table style="font-size: 11pt;"  width="100%">
             <tbody><tr>
-
                 <td>
-                    <font face="helvetica, ariel, &#39;sans serif&#39;" size="6"> 
-                        <b>Yibo Yin(尹义博)</b><br><br>
-                    </font>
-                    <font face="helvetica, ariel, &#39;sans serif&#39;" size="3"> 
-                        Undergraduate Student<br>
-                        School of Computer Science<br>
-                        Computer Science<br>
-                        Wuhan University<br><br>
-                        Email: <a>yiboyin@whu.edu.cn</a> <br>
-                        <a href="./cv/cv.pdf">Curriculum Vitae</a> <br>
-                        <a href="https://github.com/bryceyin13">Github</a> <br>
-
-
-                    </font>
+                    <div style="font-family: 'FontinSans'; font-size: 28px;">
+                        <b>Yibo Yin</b><br>
+                        <span style="font-size: 16px; font-family: 'FontinSans';">尹义博</span><br><br>
+                        <span style="font-size: 19px;">
+                            Undergraduate Student<br>
+                            School of Computer Science<br>
+                            Computer Science and Technology<br>
+                            Wuhan University<br><br>
+                            Email: <a style="font-family: 'FontinSans';">yiboyin@whu.edu.cn</a> <br>
+                            <a href="./cv/cv.pdf">Curriculum Vitae</a> <br>
+                            <a href="https://github.com/bryceyin13">Github</a>
+                        </span>
+                    </div>
                 </td>
                 <td width="50%" style="text-align: center; vertical-align: middle;">
                     <div style="display: flex; flex-direction: column; align-items: center;">
-                        <img width="250" src="./image/profile.jpg" border="0">
+                        <img width="250" src="./image/profile.jpg">
                         <p>May 2024, at Wuhan University</p>
                     </div>
                 </td>        
             </tr>
         </tbody></table> 
-        <p></p>
-        <hr size="1" align="left" noshade="" style="border-top: 1px solid #666;">
-        <p></p>
         
-        <font face="helvetica, ariel, &#39;sans serif&#39;"> 
-        </font></p><h2><font face="helvetica, ariel, &#39;sans serif&#39;">A Short Bio</font></h2><font face="helvetica, ariel, &#39;sans serif&#39;">
-         I am an undergraduate student at Wuhan University and expected to graduate in June 2025. 
-         During my undergraduate study, I am fortunate to be advised by Prof.<a href="http://graphvision.whu.edu.cn/">Chunxia Xiao</a>, Prof.<a href="https://personal.utdallas.edu/~xxg061000/">Xiaohu Guo</a> and 
-         Prof.<a href="https://cs.uwaterloo.ca/~thachisu/">Toshiya Hachisuka</a>.
-         
-        </font></p><h2><font face="helvetica, ariel, &#39;sans serif&#39;">Research</font></h2><font face="helvetica, ariel, &#39;sans serif&#39;">
-        My research is in Computer Graphics, mainly focusing on rendering, especially for Light transport simulation.
-        I also have some research experience in geometric processing, mainly focusing on medial axis and subdivision surface fitting. 
-        Like many distinguished scholars in this field, my dream is to create a totally realistic world in computers. 
+        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
+        
+        
+        <h2 style="font-family: 'FontinSans';"> A Short Bio </h2>
+            <div style="font-family: 'FontinSans'; font-size: 17px;">
+                I am an undergraduate student at Wuhan University and expected to graduate in June 2025. During my undergraduate
+                study, I am fortunate to be advised by Prof.<a href="http://graphvision.whu.edu.cn/">Chunxia Xiao</a>, Prof.
+                <a href="https://personal.utdallas.edu/~xxg061000/">Xiaohu Guo</a> and
+                Prof.<a href="https://cs.uwaterloo.ca/~thachisu/">Toshiya Hachisuka</a>.
+            </div>
+        
+        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
+        
+        <h2 style="font-family: 'FontinSans';"> Research </h2>
+            <div style="font-family: 'FontinSans'; font-size: 17px;">
+                My research is in Computer Graphics, mainly focusing on rendering, especially for Light transport simulation.
+                I also have some research experience in geometric processing, mainly focusing on medial axis and subdivision surface fitting. 
+                Like many distinguished scholars in this field, my dream is to create a totally realistic world in computers. 
+            </div>
+        
+        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
 
-        </font></p><h2><font face="helvetica, ariel, &#39;sans serif&#39;">Projects</font></h2><font face="helvetica, ariel, &#39;sans serif&#39;">
+        <h2 style="font-family: 'FontinSans';"> Projects </h2>
         <div class="projects">
             <div class="project-item">
                 <img src="./image/pm.png" alt="Photon Mapping">
                 <div class="project-details">
                     <p class="project-title">Reproduce of photon mapping</p>
-                    <p class="project-authors">A reproduce of paper <a href="https://legacy.sites.fas.harvard.edu/~cs278/papers/pmap.pdf">Global Illumination using Photon Maps</a> by H.W.Jensen.</p>
+                    <p class="project-description">A reproduction of paper <a href="https://legacy.sites.fas.harvard.edu/~cs278/papers/pmap.pdf">Global Illumination using Photon Maps</a> by H.W.Jensen.</p>
                     <div class="project-links">
                         <a href="https://github.com/bryceyin13/photon_mapping">Github</a>
                     </div>
@@ -152,24 +200,25 @@
                 <img src="./image/renderer.png" alt="Software Renderer">
                 <div class="project-details">
                     <p class="project-title">Software renderer</p>
-                    <p class="project-authors">A tiny software renderer with basic functions of rendering pipeline: MVP transforms, rasterization, texture mapping, z-buffer, perspective projection, programmable vertex & fragment shaders, etc.</p>
+                    <p class="project-description">A tiny software renderer with basic functions of rendering pipeline: MVP transforms, rasterization, texture mapping, z-buffer, perspective projection, programmable vertex & fragment shaders, etc.</p>
                     <div class="project-links">
                         <a href="https://github.com/bryceyin13/Software-Renderer">Github</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <p></p>
+        
+        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
+        <!-- <p></p>
         <hr size="1" align="left" noshade="" style="border-top: 1px solid #666;">
-        <p></p>
-
-        </font></p><h2><font face="helvetica, ariel, &#39;sans serif&#39;">Misc</font></h2><font face="helvetica, ariel, &#39;sans serif&#39;">
-        <p>I started to watch football when I was a little kid and it later became my favorite sports.
-        I am a die-hard fan of <a href="https://www.chelseafc.com/en">Chelsea F.C.</a> and Hohhot Zhong You Club, which was once the only professional football club in my hometown.
-        <p>
-        <p>I am also a huge fan of video games. I love many kinds of them, like Football Manager, Final Fantasy, Persona, EA Sports FC, Assassin's Creed, The elder Scrolls, etc.
-        <p>
+        <p></p> -->
+        
+        <h2 style="font-family: 'FontinSans';"> Misc </h2>
+            <div style="font-family: 'FontinSans'; font-size: 17px;">
+                <p>I started to watch football when I was a little kid and it later became my favorite sports.
+                   I am a die-hard fan of <a href="https://www.chelseafc.com/en">Chelsea F.C.</a> and Hohhot Zhong You Club, which was once the only professional football club in my hometown.<p>
+                <p>I am also a huge fan of video games. I love many kinds of them, like Football Manager, Final Fantasy, Persona, EA Sports FC, Assassin's Creed, The elder Scrolls, etc.<p>
+            </div>
 
         <div class="footer">
             Copyright © Yibo Yin 2024
