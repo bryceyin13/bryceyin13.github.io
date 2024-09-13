@@ -45,23 +45,14 @@
                 left: 0;
                 bottom: 0;
                 width: 100%;
-                background-color:  #003974;
-                color: white;
+                background-color:  #fff;
+                color: #000;
                 text-align: center;
-                padding: 10px 0;
+                padding: 40px 0;
             }
             body {
                 font-family: 'FontinSans', sans-serif;
             }
-            /* .profile {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 20px 0;
-            }
-            .profile img {
-                width: 250px;
-            } */
             .projects {
                 display: flex;
                 flex-direction: column;
@@ -71,6 +62,8 @@
             .project-item {
                 display: flex;
                 gap: 20px;
+                padding: 5px;
+                align-items: center;
             }
             .project-item img {
                 width: 200px;
@@ -102,126 +95,217 @@
             .project-links a {
                 text-decoration: none;
                 padding: 5px 10px;
-                border: 1px solid #6a1b9a;
+                border: 1px solid #07509f;
                 border-radius: 4px;
-                color: #6a1b9a;
+                color: #07509f;
             }
             .project-links a:hover {
-                background-color: #6a1b9a;
+                background-color: #07509f;
                 color: #fff;
             }
-            /* .hr {
-                border: none;
-                border-top: 1px solid #666; /* Set the color of the horizontal line 
-            } */
             .centered-table {
                 width: 1100px;
                 margin: 0 auto;
                 border: none;
             }
             a {
-                color: #064f9e; 
+                color: #5a90c9; 
                 text-decoration: none;
+            }
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: #003974;
+                color: white;
+                display: flex;
+                justify-content: center;
+                padding: 20px 0px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                z-index: 1000;
+            }
+            .navbar-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 1100px;
+            }
+            .navbar-title {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .navbar-links a {
+                color: white;
+                margin: 0 15px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            .navbar-links a:hover {
+                color: #FFD700;
+                transition: color 0.3s;
+            }
+            section {
+                scroll-margin-top: 80px
             }
         </style>
     </head>
 
     <body>
+        <div class="navbar">
+            <div class="navbar-container">
+                <span class="navbar-title">Wuhan University</span>
+                <nav class="navbar-links">
+                    <a href="#home">Home</a>
+                    <a href="#bio">Bio</a>
+                    <a href="#research">Research</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#misc">Misc</a>
+                </nav>
+            </div>
+        </div>
+
+        <div style="height: 80px;"></div>
+
         <table class="centered-table">
             <tbody>
                 <tr>
                     <td>
         <!-- <table border="0" width="980px" align="center"><tbody><tr><td> -->
-    
-        </td><td valign="top">
-        <br>
-        <!-- <table style="font-size: 11pt;" border="0" width="100%"> -->
-        <table style="font-size: 11pt;"  width="100%">
-            <tbody><tr>
-                <td>
-                    <div style="font-family: 'FontinSans'; font-size: 28px;">
-                        <b>Yibo Yin</b><br>
-                        <span style="font-size: 16px; font-family: 'FontinSans';">尹义博</span><br><br>
-                        <span style="font-size: 19px;">
-                            Undergraduate Student<br>
-                            School of Computer Science<br>
-                            Computer Science and Technology<br>
-                            Wuhan University<br><br>
-                            Email: <a style="font-family: 'FontinSans';">yiboyin@whu.edu.cn</a> <br>
-                            <a href="./cv/cv.pdf">Curriculum Vitae</a> <br>
-                            <a href="https://github.com/bryceyin13">Github</a>
-                        </span>
-                    </div>
-                </td>
-                <td width="50%" style="text-align: center; vertical-align: middle;">
-                    <div style="display: flex; flex-direction: column; align-items: center;">
-                        <img width="250" src="./image/profile.jpg">
-                        <p>May 2024, at Wuhan University</p>
-                    </div>
-                </td>        
-            </tr>
-        </tbody></table> 
-        
-        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
-        
-        
-        <h2 style="font-family: 'FontinSans';"> A Short Bio </h2>
-            <div style="font-family: 'FontinSans'; font-size: 17px;">
-                I am an undergraduate student at Wuhan University and expected to graduate in June 2025. During my undergraduate
-                study, I am fortunate to be advised by Prof.<a href="http://graphvision.whu.edu.cn/">Chunxia Xiao</a>, Prof.
-                <a href="https://personal.utdallas.edu/~xxg061000/">Xiaohu Guo</a> and
-                Prof.<a href="https://cs.uwaterloo.ca/~thachisu/">Toshiya Hachisuka</a>.
-            </div>
-        
-        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
-        
-        <h2 style="font-family: 'FontinSans';"> Research </h2>
-            <div style="font-family: 'FontinSans'; font-size: 17px;">
-                My research is in Computer Graphics, mainly focusing on rendering, especially for Light transport simulation.
-                I also have some research experience in geometric processing, mainly focusing on medial axis and subdivision surface fitting. 
-                Like many distinguished scholars in this field, my dream is to create a totally realistic world in computers. 
-            </div>
-        
-        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
 
-        <h2 style="font-family: 'FontinSans';"> Projects </h2>
-        <div class="projects">
-            <div class="project-item">
-                <img src="./image/pm.png" alt="Photon Mapping">
-                <div class="project-details">
-                    <p class="project-title">Reproduce of photon mapping</p>
-                    <p class="project-description">A reproduction of paper <a href="https://legacy.sites.fas.harvard.edu/~cs278/papers/pmap.pdf">Global Illumination using Photon Maps</a> by H.W.Jensen.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/bryceyin13/photon_mapping">Github</a>
+        <section id="home">
+            <table style="font-size: 11pt;" width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div style="font-family: 'FontinSans'; font-size: 28px;">
+                                <b style="color: #003974;">Yibo Yin</b><br>
+                                <span style="font-size: 16px; font-family: 'FontinSans'; color: #003974;">尹义博</span><br><br>
+                                <span style="font-size: 20px;">
+                                    Undergraduate Student<br>
+                                    School of Computer Science<br>
+                                    Computer Science and Technology<br>
+                                    <a href="https://en.whu.edu.cn/" target="_blank">Wuhan University</a><br><br>
+                                    Email: <a href="mailto:yiboyin@whu.edu.cn" style="font-family: 'FontinSans';">yiboyin@whu.edu.cn</a> <br>
+                                    <a href="./cv/cv.pdf" target="_blank">Curriculum Vitae</a> <br>
+                                    <a href="https://github.com/bryceyin13" target="_blank">Github</a>
+                                </span>
+                            </div>
+                        </td>
+                        <td width="50%" style="text-align: center; vertical-align: middle;">
+                            <div style="display: flex; flex-direction: column; align-items: center;">
+                                <img 
+                                    width="250" 
+                                    src="./image/profile.jpg"
+                                    style="height: 187.5px; border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+                                >
+                                <p>May 2024, at Wuhan University</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
+        </section>
+
+        <section id="bio">
+            <h2 style="font-family: 'FontinSans'; color: #003974;"> A Short Bio </h2>
+                <div style="font-family: 'FontinSans'; font-size: 17px;">
+                    I am an undergraduate student at Wuhan University and expected to graduate in June 2025. During my undergraduate
+                    study, I am fortunate to be advised by Prof. <a href="http://graphvision.whu.edu.cn/" target="_blank">Chunxia Xiao</a>, Prof. 
+                    <a href="https://personal.utdallas.edu/~xxg061000/" target="_blank">Xiaohu Guo</a> and
+                    Prof. <a href="https://cs.uwaterloo.ca/~thachisu/" target="_blank">Toshiya Hachisuka</a>.
+                </div>
+            
+            <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
+        </section>
+
+        <section id="research">
+            <h2 style="font-family: 'FontinSans'; color: #003974;"> Research </h2>
+            <div style="font-family: 'FontinSans'; font-size: 17px;">
+                My research is in Computer Graphics, mainly focusing on photorealistic rendering, especially for Light transport simulation.
+                I also have some research experience in geometric processing, mainly focusing on 
+                <a href="https://en.wikipedia.org/wiki/Medial_axis" target="_blank">medial axis</a> transform and subdivision surface fitting.
+                Like many distinguished scholars in this field, I literally dream to create a simulated world in computers.
+            </div>
+            <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
+        </section>
+
+        <section id="projects">
+            <h2 style="font-family: 'FontinSans'; color: #003974;"> Projects </h2>
+            <div class="projects">
+                <div class="project-item">
+                    <img src="./image/pm.png" alt="Photon Mapping" style="height: 200px; border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <div class="project-details">
+                        <p class="project-title">Reproduce of photon mapping</p>
+                        <p class="project-description">A reproduction of the <i>Rendering Techniques</i> paper
+                             <a href="https://legacy.sites.fas.harvard.edu/~cs278/papers/pmap.pdf" target="_blank">Global Illumination using Photon Maps</a> by H.W.Jensen.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/bryceyin13/photon_mapping" target="_blank">Github</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="./image/renderer.png" alt="Software Renderer" style="height: 200px; border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <div class="project-details">
+                        <p class="project-title">Software renderer</p>
+                        <p class="project-description">
+                            A tiny software renderer with the workflow of rendering pipeline. It has the following features: 
+                            <br> <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&#8226; MVP transforms<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Texture mapping<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Z-buffer<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Perspective projection<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Programmable vertex & fragment shaders<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Movable camera<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Shadow mapping<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Screen space ambient occlusion<br>
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/bryceyin13/Software-Renderer" target="_blank">Github</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="./image/qmat.png" alt="Q-MAT source code" style="width: 200px; border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <div class="project-details">
+                        <p class="project-title">Q-MAT source code repo</p>
+                        <p class="project-description">An open-source code repository for <i>SIGGRAPH</i> paper
+                            <a href="https://personal.utdallas.edu/~xguo/Q-MAT.pdf" target="_blank">Q-MAT: Computing Medial Axis Transform by Quadratic Error Minimization</a>.
+                            <br><br>Under the guidance of Prof. <a href="https://personal.utdallas.edu/~xxg061000/" target="_blank">Xiaohu Guo</a> and Dr. <a href="https://ningnawang.github.io/" target="_blank">Ningna Wang</a>,
+                            I cleaned up the source code, set up the environment, and tested building the solution on Windows, leading to an open-source version for research. 
+                            This was done during my remote internship at the University of Texas at Dallas.
+                        <div class="project-links">
+                            <a href="https://github.com/ningnawang/QMAT" target="_blank">Github</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="project-item">
-                <img src="./image/renderer.png" alt="Software Renderer">
-                <div class="project-details">
-                    <p class="project-title">Software renderer</p>
-                    <p class="project-description">A tiny software renderer with basic functions of rendering pipeline: MVP transforms, rasterization, texture mapping, z-buffer, perspective projection, programmable vertex & fragment shaders, etc.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/bryceyin13/Software-Renderer">Github</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
+            <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0 20px 0;">
+        </section>
         <!-- <p></p>
         <hr size="1" align="left" noshade="" style="border-top: 1px solid #666;">
         <p></p> -->
         
-        <h2 style="font-family: 'FontinSans';"> Misc </h2>
+        <section id="misc">
+            <h2 style="font-family: 'FontinSans'; color: #003974;"> Misc </h2>
             <div style="font-family: 'FontinSans'; font-size: 17px;">
-                <p>I started to watch football when I was a little kid and it later became my favorite sports.
-                   I am a die-hard fan of <a href="https://www.chelseafc.com/en">Chelsea F.C.</a> and Hohhot Zhong You Club, which was once the only professional football club in my hometown.<p>
-                <p>I am also a huge fan of video games. I love many kinds of them, like Football Manager, Final Fantasy, Persona, EA Sports FC, Assassin's Creed, The elder Scrolls, etc.<p>
+                <p>I started to watch football when I was a little kid and it later became my favorite sport.
+                   I am a die-hard fan of <a href="https://www.chelseafc.com/en" target="_blank">Chelsea F.C.</a> and Hohhot Zhong You Football Club,
+                    which was once the only professional football club in my hometown.<p>
+                <p>I am also a huge fan of video games. I love various kinds of them, like Football Manager, Final Fantasy, Persona,
+                     EA Sports FC, Assassin's Creed, The Elder Scrolls, etc.<p>
             </div>
+        </section>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
+            
         <div class="footer">
             Copyright © Yibo Yin 2024
         </div>
+
     <body>     
 <html>
