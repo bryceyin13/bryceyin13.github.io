@@ -9,6 +9,8 @@
         <meta name="keywords" content="Yibo, Yibo Yin, École polytechnique fédérale de Lausanne, EPFL, yibo, yibo yin, whu, epfl, Wuhan University, WHU">
         <meta name="google-site-verification" content="rteqJ4-Tg7NTlOAJd6aTvg3Io0bgpUeopVzNL3zQBrk" />
         <link rel="icon" href="./image/icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
         <style>
             @font-face {
                 font-family: 'FontinSans';
@@ -79,6 +81,25 @@
                 border-radius: 8px;
                 border: 2px solid #ccc; 
                 padding: 5px;
+            }
+            .publication-img-wrapper {
+                position: relative;
+                flex-shrink: 0;
+            }
+            .conference-badge {
+                position: absolute;
+                top: 10px;
+                left: -5px;
+                background-color: #003974;
+                color: #fff;
+                font-family: 'FontinSans', sans-serif;
+                font-size: 12px;
+                font-weight: bold;
+                padding: 4px 10px;
+                border-radius: 4px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                z-index: 1;
+                white-space: nowrap;
             }
             .publication-details {
                 display: flex;
@@ -223,6 +244,84 @@
             section {
                 scroll-margin-top: 80px
             }
+
+            /* Profile card styles */
+            .profile-card {
+                padding: 10px 0;
+            }
+            .profile-name {
+                font-family: 'FontinSans', sans-serif;
+                font-size: 28px;
+                font-weight: bold;
+                color: #003974;
+                margin: 0 0 2px 0;
+            }
+            .profile-name-cn {
+                font-family: 'KaiTi', '楷体', serif;
+                font-size: 20px;
+                color: #003974;
+                margin: 0 0 15px 0;
+            }
+            .profile-title {
+                font-family: 'FontinSans', sans-serif;
+                font-size: 17px;
+                color: #555;
+                margin: 0 0 25px 0;
+                line-height: 1.6;
+            }
+            .profile-title a {
+                color: #000;
+                text-decoration: none;
+            }
+            .profile-title a:hover {
+                color: #ffd900;
+                transition: color 0.3s;
+            }
+            .profile-info {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            .info-item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-family: 'FontinSans', sans-serif;
+                font-size: 14px;
+                color: #555;
+            }
+            .info-item i,
+            .info-item .icon-ai {
+                width: 18px;
+                text-align: center;
+                font-size: 16px;
+            }
+            .info-item .fa-envelope {
+                color: #888;
+            }
+            .info-item .fa-linkedin {
+                color: #0A66C2;
+            }
+            .info-item .fa-github {
+                color: #333;
+            }
+            .info-item .ai-google-scholar {
+                color: #4285F4;
+            }
+            .info-item .ai-cv {
+                color: #5a90c9;
+            }
+            .info-item a {
+                color: #000;
+                text-decoration: none;
+            }
+            .info-item a:hover {
+                color: #ffd900;
+                transition: color 0.3s;
+            }
         </style>
     </head>
 
@@ -253,25 +352,37 @@
             <table style="font-size: 11pt;" width="100%">
                 <tbody>
                     <tr>
-                        <td>
-                            <div style="font-family: 'FontinSans'; font-size: 28px;">
-                                <b style="color: #003974;">Yibo Yin</b><br>
-                                <span style="font-family: 'KaiTi', '楷体', serif; font-size: 20px; color: #003974;">尹义博</span><br><br>
-                                
-                                <span style="font-size: 17px;">
-                                    <!-- Undergraduate Student<br>
-                                    School of Computer Science<br>
-                                    Computer Science and Technology<br> 
-                                    <a href="https://en.whu.edu.cn/" target="_blank">Wuhan University</a><br><br> -->
-                                    Master's student<br>
-                                    Digital Humanites<br>
-                                    <a href="https://www.epfl.ch/en/" target="_blank">École polytechnique fédérale de Lausanne</a><br>
-                                    <br>
-                                    <!-- Email: <a href="mailto:yiboyin@whu.edu.cn" style="font-family: 'FontinSans';">yiboyin@whu.edu.cn</a> <br> -->
-                                    Email: <a href="mailto:yibo.yin@epfl.ch" style="font-family: 'FontinSans';">yibo.yin@epfl.ch</a> <br>
-                                    [<a href="./cv/cv.pdf" target="_blank">Curriculum Vitae</a>] <br>
-                                    [<a href="https://github.com/bryceyin13" target="_blank">Github</a>]
-                                </span>
+                        <td style="vertical-align: top;">
+                            <div class="profile-card">
+                                <div class="profile-name"><b>Yibo Yin</b></div>
+                                <div class="profile-name-cn">尹义博</div>
+                                <p class="profile-title">
+                                    B.Eng. @Wuhan University,<br>
+                                    Master's Student @EPFL</a>
+                                </p>
+
+                                <div class="profile-info">
+                                    <div class="info-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:yibo.yin@epfl.ch">yibo.yin@epfl.ch</a>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                        <a href="https://www.linkedin.com/in/yibo-yin-a4b631307/" target="_blank">LinkedIn</a>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fa-brands fa-github"></i>
+                                        <a href="https://github.com/bryceyin13" target="_blank">GitHub</a>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="ai ai-google-scholar icon-ai"></i>
+                                        <a href="https://scholar.google.com/citations?user=uMWK9v4AAAAJ" target="_blank">Google Scholar</a>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="ai ai-cv icon-ai"></i>
+                                        <a href="./cv/cv.pdf" target="_blank">Curriculum Vitae</a>
+                                    </div>
+                                </div>
                             </div>
                         </td>
                         <td width="50%" style="text-align: center; vertical-align: middle;">
@@ -325,7 +436,10 @@
             <h2 style="font-family: 'FontinSans'; color: #003974;"> Publications </h2>
             <div class="publications">
                 <div class="publication-item">
-                    <img src="./image/matstruct.png" alt="MATStruct" style="height: 175px; border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <div class="publication-img-wrapper">
+                        <span class="conference-badge">SIGGRAPH Asia '25</span>
+                        <img src="./image/2025_siga_matstruct.jpg" alt="MATStruct" style="height: 175px; border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    </div>
                     <div class="publication-details">
                         <p class="publication-title">MATStruct: High-Quality Medial Mesh Computation via Structure-aware Variational Optimization</p>
                         <p class="publication-description">
