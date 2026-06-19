@@ -1,0 +1,12 @@
+cv/cv/old_resume/
+
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+
+cv/cv/cv/cv.pdf

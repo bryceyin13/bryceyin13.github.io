@@ -1,0 +1,203 @@
+% !TEX program = xelatex
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[
+  top=0.50in,
+  bottom=0.55in,
+  left=0.60in,
+  right=0.55in
+]{geometry}
+\usepackage{fontspec}
+\usepackage{paracol}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\usepackage{needspace}
+\usepackage{xcolor}
+
+\defaultfontfeatures{Ligatures=TeX}
+\IfFontExistsTF{Tinos}{
+  \setmainfont{Tinos}
+}{
+  \IfFontExistsTF{Times New Roman}{
+    \setmainfont{Times New Roman}
+  }{
+    \setmainfont{TeX Gyre Termes}
+  }
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{0.10in}
+\setlength{\columnseprule}{0pt}
+\urlstyle{same}
+\emergencystretch=2em
+
+\newcommand{\squarebullet}{\raisebox{0.25ex}{\rule{0.45ex}{0.45ex}}}
+\setlist[itemize]{
+  label=\squarebullet,
+  leftmargin=1.15em,
+  topsep=0.16em,
+  itemsep=0.05em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\newcommand{\sectionlabel}[1]{%
+  {\fontsize{9.5pt}{11pt}\selectfont\bfseries\MakeUppercase{#1}}%
+}
+
+\newenvironment{cvsection}[1]{%
+  \par\vspace{0.86\baselineskip}%
+  \Needspace{3\baselineskip}%
+  \setcolumnwidth{1.10in,\fill}%
+  \begin{paracol}{2}%
+  \raggedright\sectionlabel{#1}%
+  \switchcolumn
+}{%
+  \end{paracol}%
+}
+
+\newcommand{\externalicon}[1]{%
+  \href{#1}{\raisebox{0.12ex}{\normalfont\scriptsize\faExternalLink*}}%
+}
+
+\newcommand{\educationentry}[4]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}Xr@{}}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{#3} & \textit{\small #4}
+  \end{tabularx}%
+}
+
+\newcommand{\researchentry}[2]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}Xr@{}}
+    \textbf{#1} & \textit{#2}
+  \end{tabularx}%
+}
+
+\newcommand{\projectentry}[2]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}Xr@{}}
+    \textbf{#1} & \textit{#2}
+  \end{tabularx}%
+}
+
+\newcommand{\awardentry}[2]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}p{1.15em}Xr@{}}
+    \squarebullet & #1 & \textit{#2}
+  \end{tabularx}%
+}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{24pt}{27pt}\selectfont\bfseries Yibo Yin}
+
+  \vspace{0.20em}
+  Email: \href{mailto:yibo.yin@epfl.ch}{yibo.yin@epfl.ch}
+  \quad\textbullet\quad
+  Phone: \href{tel:+8613948812636}{(+86) 139 4881 2636}
+  \quad\textbullet\quad
+  Home Page: \href{https://bryceyin13.github.io/}{\textit{https://bryceyin13.github.io/}}
+\end{center}
+
+\vspace{-0.15\baselineskip}
+
+\begin{cvsection}{Education}
+\educationentry{École polytechnique fédérale de Lausanne (EPFL)}
+  {Lausanne, Switzerland}
+  {M.Sc. in Digital Humanities}
+  {09/2025 - Present}
+\begin{itemize}
+  \item Research Focus: Computer Graphics, Computer Vision, and Machine Learning
+  % \item Key Coursework: Advanced Computer Graphics, Applied Data Analysis
+  \item \textbf{GPA:} 5.56 /6.00
+\end{itemize}
+
+\vspace{0.56\baselineskip}
+\educationentry{Wuhan University}
+  {Wuhan, China}
+  {B.Eng. in Computer Science and Technology}
+  {09/2021 - 06/2025}
+\begin{itemize}
+  \item \textbf{GPA:} 3.93 /4.00 (top 4\%)
+\end{itemize}
+\end{cvsection}
+
+\begin{cvsection}{Publications}
+\textbf{MATStruct: High-Quality Medial Mesh Computation via Structure-aware Variational Optimization}
+
+Ningna Wang, Rui Xu, \textbf{\textit{Yibo Yin}}, Zichun Zhong, Taku Komura, Wenping Wang, Xiaohu Guo
+
+\textit{ACM SIGGRAPH Asia 2025 (Conference Track)}
+\end{cvsection}
+
+\begin{cvsection}{Research Experience}
+  \researchentry{Image and Visual Representation Lab, {\small EPFL}}{06/2026 - Present}
+\textit{Research Assistant | {\small Advisor: Prof. Sabine Süsstrunk \externalicon{https://people.epfl.ch/sabine.susstrunk?lang=en} and Dr. Zhuoqian Yang \externalicon{https://inrainbws.github.io/}}}
+\begin{itemize}
+  \item Working on Weight Space Representation and Implicit Neural Representations.
+\end{itemize}
+
+\vspace{0.58\baselineskip}
+\researchentry{Realistic Graphics Lab, {\small EPFL}}{03/2026 - 06/2026}
+\textit{Research Assistant | {\small Advisor: Prof. Wenzel Jakob \externalicon{https://rgl.epfl.ch/people/wjakob}}}
+\begin{itemize}
+  \item Implemented differentiable Gaussian Process Implicit Surface (GPIS) sampling with Dr.Jit.
+  \item Developed a hybrid surface -- volume rendering approach for Many-Worlds inverse rendering.
+\end{itemize}
+
+\vspace{0.58\baselineskip}
+\researchentry{Computer Graphics Lab, {\small The University of Texas at Dallas}}{04/2024 - 11/2025}
+\textit{Research Assistant (Remote) | {\small Advisor: Prof. Xiaohu Guo \externalicon{https://personal.utdallas.edu/~xguo/}}}
+\begin{itemize}
+  \item Extended the evaluation algorithm in the SIGGRAPH Course Note paper \textit{Evaluation of Loop Subdivision Surfaces} and the SGP paper \textit{Fitting Sharp Features with Loop Subdivision Surfaces} to structured medial axis meshes under Loop Subdivision.
+  \item Extended the simplification algorithm in the SIGGRAPH paper \textit{Q-MAT: Computing Medial Axis Transform by Quadratic Error Minimization} to structured medial axis meshes.
+  \item Proposed a subdivision surface fitting algorithm in collaboration with advisor, designed to preserve the sharp features of the structured medial axis mesh during fitting.
+\end{itemize}
+
+\vspace{0.58\baselineskip}
+\researchentry{Waterloo Computer Graphics Lab, {\small University of Waterloo}}{06/2024 - 08/2024}
+\textit{Research Assistant (Remote) | {\small Advisor: Prof. Toshiya Hachisuka \externalicon{https://cs.uwaterloo.ca/~thachisu/}}}
+\begin{itemize}
+  \item Reproduced the algorithm in the SIGGRAPH paper \textit{A Practical Walk-on-Boundary Method for Boundary Value Problems} for solving the boundary value problem of Laplace's equation with Dirichlet boundaries.
+\end{itemize}
+
+\vspace{0.58\baselineskip}
+\researchentry{Graphics and Vision Lab, {\small Wuhan University}}{05/2023 - 01/2024}
+\textit{Research Assistant | {\small Advisor: Prof. Chunxia Xiao \externalicon{http://graphvision.whu.edu.cn/}}}
+\begin{itemize}
+  \item Assembled a set of equipment with an Intel depth camera and STMicroelectronics ToF sensors, creating a dataset of over 10,000 images and corresponding sensor data.
+  \item Proposed a novel monocular depth estimation method using RGB images and sensor data as input.
+\end{itemize}
+\end{cvsection}
+
+\begin{cvsection}{Selected Projects}
+\projectentry{Physically Based Renderer}{2026}
+\textit{CS-440 Advanced Computer Graphics Rendering Competition, EPFL}
+\begin{itemize}
+  \item Extended the Nori framework with heterogeneous volumetric path tracing, delta and ratio tracking, Henyey-Greenstein phase functions, and MIS over emitter, phase, and BSDF sampling.
+  \item Implemented HDR environment map lighting, thin-lens depth of field, motion blur, principled BSDF, and GGX rough dielectric materials for a storm-scene rendering pipeline.
+\end{itemize}
+\end{cvsection}
+
+\newpage
+
+\begin{cvsection}{Awards}
+\awardentry{\textbf{Outstanding Student} (10\% school-wide), Wuhan University}{2022, 2023, 2024}
+\awardentry{\textbf{Second Class Scholarship} (10\% school-wide), Wuhan University}{2022}
+\awardentry{\textbf{Third Class Scholarship} (15\% school-wide), Wuhan University}{2023, 2024}
+\awardentry{\textbf{Lei Jun Computer Innovation and Development Fund}, Wuhan University}{2024}
+\end{cvsection}
+
+\begin{cvsection}{Technical Skills}
+\begin{itemize}
+  \item \textbf{Languages:} Mandarin (Native), English (TOEFL iBT 102)
+  \item \textbf{Programming Languages:} C++, C, Python, C\#, GLSL, SQL, Verilog HDL, Java, \LaTeX
+  \item \textbf{Libraries / Frameworks / Tools:} PyTorch, Dr.Jit, Mitsuba, PBRT-v3, Blender, Eigen, CGAL, libigl, Git, CMake
+\end{itemize}
+\end{cvsection}
+
+\end{document}
