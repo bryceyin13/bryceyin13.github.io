@@ -84,9 +84,15 @@
   \end{tabularx}%
 }
 
+% \newcommand{\awardentry}[2]{%
+%   \noindent\begin{tabularx}{\linewidth}{@{}p{1.15em}Xr@{}}
+%     \squarebullet & #1 & \textit{#2}
+%   \end{tabularx}%
+% }
+
 \newcommand{\awardentry}[2]{%
-  \noindent\begin{tabularx}{\linewidth}{@{}p{1.15em}Xr@{}}
-    \squarebullet & #1 & \textit{#2}
+  \item \begin{tabularx}{\linewidth}[t]{@{}Xr@{}}
+    #1 & \textit{#2}
   \end{tabularx}%
 }
 
@@ -195,10 +201,12 @@ Doctoral Assistant \externalicon{https://inrainbws.github.io/}}}
 % \newpage
 
 \begin{cvsection}{Awards}
-\awardentry{\textbf{Outstanding Student} (10\% school-wide), Wuhan University}{2022, 2023, 2024}
-\awardentry{\textbf{Second Class Scholarship} (10\% school-wide), Wuhan University}{2022}
-\awardentry{\textbf{Third Class Scholarship} (15\% school-wide), Wuhan University}{2023, 2024}
-\awardentry{\textbf{Lei Jun (Xiaomi) Computer Innovation and Development Fund}, Wuhan University}{2024}
+\begin{itemize}
+  \awardentry{\textbf{Outstanding Student} (10\% school-wide), Wuhan University}{2022, 2023, 2024}
+  \awardentry{\textbf{Second Class Scholarship} (10\% school-wide), Wuhan University}{2022}
+  \awardentry{\textbf{Third Class Scholarship} (15\% school-wide), Wuhan University}{2023, 2024}
+  \awardentry{\textbf{Lei Jun (Xiaomi) Computer Innovation and Development Fund}, Wuhan University}{2024}
+\end{itemize}
 \end{cvsection}
 
 \begin{cvsection}{Skills}
