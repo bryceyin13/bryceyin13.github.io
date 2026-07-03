@@ -1,0 +1,212 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+
+% Bill Ryan's Elegant LaTeX Résumé
+
+
+\documentclass{resume}
+% \usepackage{graphicx}   % 确保导言区有这个
+   % 点击超链接
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+% \usepackage[backref]{hyperref}
+% \usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{adjustbox}
+% \newcommand{\ExternalLink}{%
+% \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{%
+%     \begin{scope}[x=1ex, y=1ex]
+%         \clip (-0.1,-0.1) 
+%             --++ (-0, 1.2) 
+%             --++ (0.6, 0) 
+%             --++ (0, -0.6) 
+%             --++ (0.6, 0) 
+%             --++ (0, -1);
+%         \path[draw, 
+%             line width = 0.5, 
+%             rounded corners=0.5] 
+%             (0,0) rectangle (1,1);
+%     \end{scope}
+%     \path[draw, line width = 0.5] (0.5, 0.5) 
+%         -- (1, 1);
+%     \path[draw, line width = 0.5] (0.6, 1) 
+%         -- (1, 1) -- (1, 0.6);
+%     }
+% }
+\newcommand{\ExternalLink}{%
+\makebox[1.2ex][c]{%
+\tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{%
+    \begin{scope}[x=1ex, y=1ex]
+        \clip (-0.1,-0.1) 
+            --++ (-0, 1.2) 
+            --++ (0.6, 0) 
+            --++ (0, -0.6) 
+            --++ (0.6, 0) 
+            --++ (0, -1);
+        \path[draw, line width = 0.5, rounded corners=0.5] 
+            (0,0) rectangle (1,1);
+    \end{scope}
+    \path[draw, line width = 0.5] (0.5, 0.5) -- (1, 1);
+    \path[draw, line width = 0.5] (0.6, 1) -- (1, 1) -- (1, 0.6);
+}}}
+
+
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+\linespread{0.8}
+% \small
+
+
+\name{Yibo Yin}
+
+\basicInfo{
+  \small
+  % \email{yiboyin@whu.edu.cn} \textperiodcentered\ 
+  \email{yibo.yin@epfl.ch} \textperiodcentered\ 
+  \phone{(+86) 139 4881 2636} \textperiodcentered\ 
+  \homepage{https://bryceyin13.github.io/}
+  }
+ 
+\section{EDUCATION}
+\datedsubsection{\textbf{École polytechnique fédérale de Lausanne (EPFL)}}{ \textbf{Lausanne, Switzerland} }
+\textit{M.Sc. in Digital Humanities} {\hfill \textit{\small 09/2025 - Present}}
+\begin{itemize}
+    % \item Coursework equivalent to CS Major \& DH Minor
+    \item Research Focus: Computer Graphics 
+    \item Key Coursework: Advanced Computer Graphics, Applied Data Analysis
+    \item \textbf{GPA:} 5.56 /6.00
+\end{itemize}
+
+\datedsubsection{\textbf{Wuhan University}}{ \textbf{Wuhan, China} }
+\textit{B.Eng. in Computer Science and Technology} {\hfill \textit{\small 09/2021 - 06/2025}}
+\begin{itemize}
+    \item \textbf{GPA:} 3.93 /4.00 (top 4\%)
+\end{itemize}
+
+% \textbf{GPA:} 3.94 /4.00 | \textbf{Average Score:} 91.93 /100 | \textbf{Ranking:} 8 /254
+
+
+\section{PUBLICATIONS}
+\datedsubsection{\textbf{MATStruct: High-Quality Medial Mesh Computation via
+Structure-aware Variational Optimization}}{}
+Ningna Wang, Rui Xu, \textbf{\textit{Yibo Yin}}, Zichun Zhong, Taku Komura, Wenping Wang, Xiaohu Guo \\
+\textit{ACM SIGGRAPH Asia 2025 (Conference Track)}
+
+
+\section{RESEARCH EXPERIENCE}
+% \datedsubsection{\textbf{Realistic Graphics Lab}, {\small EPFL}}{\textit{02/2026 - Present}} 
+% \textit{Research Assistant | {\small Advisor: Prof. Wenzel Jakob} \href{https://rgl.epfl.ch/people/wjakob}{\raisebox{-0.3ex}{\includegraphics[height=1.7ex]{resume/icon/icon.png}}}}
+
+\datedsubsection{\textbf{Realistic Graphics Lab}, {\small EPFL}}{\textit{03/2026 - 06/2026}} 
+\textit{Research Assistant | {\small Advisor: Prof. Wenzel Jakob} \href{https://rgl.epfl.ch/people/wjakob}{\raisebox{-0.3ex}{\includegraphics[height=1.7ex]{resume/icon/icon.png}}}}
+\begin{itemize}
+  {\fontsize{10}{16}\selectfont
+  \item Implemented differentiable Gaussian Process Implicit Surface (GPIS) sampling with Dr.Jit.
+  \item Developed a hybrid surface -- volume rendering approach for Many-Worlds inverse rendering.
+  }
+\end{itemize}
+
+\datedsubsection{\textbf{Computer Graphics Lab}, {\small The University of Texas at Dallas}}{\textit{04/2024 - 11/2025}} 
+\textit{Research Assistant (Remote) | {\small Advisor: Prof. Xiaohu Guo} \href{https://personal.utdallas.edu/~xguo/}{\raisebox{-0.3ex}{\includegraphics[height=1.7ex]{resume/icon/icon.png}}}}
+% \href{https://www.cs.cmu.edu/afs/cs/academic/class/15456-f15/RelatedWork/Loop-by-Stam.pdf}
+% \href{https://i.cs.hku.hk/GraphicsGroup/publications/pdf/sgp08ling.pdf}
+% \href{https://personal.utdallas.edu/~xguo/Q-MAT.pdf}
+\begin{itemize}
+  {\fontsize{10}{16}\selectfont
+  % \item Applied the Loop Subdivision rule to the structured medial meshes with sharp features. 
+  \item  Extended the evaluation algorithm in the SIGGRAPH Course Note paper {\textit{Evaluation of Loop Subdivision Surfaces}} and the SGP paper {\textit{Fitting Sharp Features with Loop Subdivision Surfaces}} to structured medial axis meshes under Loop Subdivision.
+  % \item  Extended the evaluation algorithm in the SGP paper \href{https://i.cs.hku.hk/GraphicsGroup/publications/pdf/sgp08ling.pdf}{\textit{Fitting Sharp Features with Loop Subdivision Surfaces}} to structured medial axis meshes.
+  \item Extended the simplification algorithm in the SIGGRAPH paper {\textit{Q-MAT: Computing Medial Axis Transform by Quadratic Error Minimization}} to structured medial axis meshes.
+  \item Proposed a subdivision surface fitting algorithm in collaboration with advisor, designed to preserve the sharp features of the structured medial axis mesh during fitting.
+  }
+\end{itemize}
+
+% \href{https://rsugimoto.net/WoBforBVPsProject/WoBforBVPs.pdf}
+\datedsubsection{\textbf{Waterloo Computer Graphics Lab}, {\small University of Waterloo}}{\textit{06/2024 - 08/2024}} 
+\textit{Research Assistant (Remote) | {\small Advisor: Prof. Toshiya Hachisuka} \href{https://cs.uwaterloo.ca/~thachisu/}{\raisebox{-0.3ex}{\includegraphics[height=1.7ex]{resume/icon/icon.png}}}}
+\begin{itemize}
+  {\fontsize{10}{16}\selectfont
+  \item Reproduced the algorithm in the SIGGRAPH paper {\textit{A Practical Walk-on-Boundary Method for Boundary Value Problems}} for solving the boundary value problem of Laplace's equation with Dirichlet boundaries. 
+  }
+\end{itemize}
+
+\datedsubsection{\textbf{Graphics and Vision Lab}, {\small Wuhan University}}{\textit{05/2023 - 01/2024}} 
+\textit{Research Assistant | {\small Advisor: Prof. Chunxia Xiao} \href{http://graphvision.whu.edu.cn/}{\raisebox{-0.3ex}{\includegraphics[height=1.7ex]{resume/icon/icon.png}}}}
+% \includegraphics[height=1ex]{icon.pdf}
+\begin{itemize}
+  {\fontsize{10}{16}\selectfont
+  \item Assembled a set of equipment with an Intel depth camera and STMicroelectronics ToF sensors, creating a dataset of over 10,000 images and corresponding sensor data.
+  \item Proposed a novel monocular depth estimation method using RGB images and sensor data as input.
+  }
+\end{itemize}
+
+
+\section{SELECTED PROJECTS}
+\datedsubsection{\textbf{Software Renderer}}{\textit{Jan. 2023 - Mar. 2023}} 
+\vspace{-0.2em} 
+\textit{Personal Project}
+% \textbf{Software Renderer} {\hfill \textit{Mar. 2023 - May. 2023}} 
+\vspace{-0.2em}
+\begin{itemize}
+  \item Implemented the rendering pipeline with features including MVP transformations, texture mapping, perspective projection, programmable shaders, shadow mapping, ambient occlusion, etc. 
+  
+  % \href{https://github.com/bryceyin13/Software-Renderer}{\textit{[Github]}}
+\end{itemize}
+\vspace{-0.6em}
+
+% \datedsubsection{\textbf{Interactive Ray Tracer}}{\textit{Mar. 2023 - June. 2023}} 
+% \vspace{-0.2em}
+% \textit{Project Leader}
+% \vspace{-0.2em}
+% % \textbf{Interactive Ray Tracer} {\hfill \textit{May. 2023 - June. 2023}}
+% \begin{itemize}
+%   \item Developed a Whitted-style like ray tracing system with an interactive GUI, enabling users to add spheres with customizable metal and dielectric materials to the scene and render them.
+%   \item Led the development process, implementing the core ray tracing algorithm, material parameter configuration, object addition, and the asynchronous rendering process with main window.
+% \end{itemize}
+% \vspace{-0.5em}
+% \textbf{Reproduction of Photon Mapping} {\hfill \textit{Sept.2023 - Dec.2023}}
+% \begin{itemize}
+%   \item Reproduced the Rendering Techniques paper  \href{https://legacy.sites.fas.harvard.edu/~cs278/papers/pmap.pdf}{\textit{Global Illumination using Photon Maps}} with final gathering technique. \href{https://github.com/bryceyin13/photon\_mapping}{\textit{[Github]}} 
+% \end{itemize}
+
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{AWARDS}
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{Outstanding Student} (10\% school-wide), Wuhan University{\hfill{\textit{2022, 2023, 2024}}}
+  \item \textbf{Second Class Scholarship} (10\% school-wide), Wuhan University{\hfill{\textit{2022}}}
+  \item \textbf{Third Class Scholarship} (15\% school-wide), Wuhan University{\hfill{\textit{2023, 2024}}}
+  \item \textbf{Lei Jun Computer Innovation and Development Fund}, Wuhan University{\hfill{\textit{2024}}}
+\end{itemize}
+
+\section{TECHNICAL SKILLS}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{Languages:} Mandarin (Native), English (TOEFL iBT 102)
+  % , R26 | L26 | S23 | W27)
+  \item \textbf{Programming Languages:} C++, C, Python, C\#, GLSL, SQL, Verilog HDL, Java
+  \item \textbf{Libraries / Frameworks / Tools:} PyTorch, Dr.Jit, Mitsuba, PBRT-v3, Blender, Eigen, CGAL, libigl, Git, CMake 
+  % \item \textbf{Library/Framework/Tool/Software:} Git, CMake, Nori, Blender, Pbrt-v3, PyTorch 
+  % \item \textbf{Personal Interests:} Football, Baseball, Snooker, Military history, Classic mystery novels, Classical Music, Violin
+  % \item \textbf{Library/Framework/Tool:} PyTorch, Git, CMake
+  
+\end{itemize}
+
+
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
